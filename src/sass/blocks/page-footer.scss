@@ -1,0 +1,11 @@
+.page-footer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.page-footer__group {
+  @include standart-flex();
+  align-items: flex-start;
+}
+

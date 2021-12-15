@@ -1,0 +1,39 @@
+.travelling {
+  margin: 0 0 200px 0;
+  padding: 0;
+  background-image: url("../img/background/travelling.jpg");
+  min-height: 860px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.travelling__inner {
+  max-width: 400px;
+  margin-right: 400px
+
+}
+
+.travelling__title {
+  @include semibold-fonts();
+  color: $page-white-color;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+.travelling__text {
+  color: $page-white-color;
+  margin: 0 0 39px 0;
+  padding: 0;
+}
+
+.travelling__button-arrow {
+  &::after {
+    content: "";
+    background: url("../img/travelling/arrow.svg") no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    padding: 0;
+  }
+}

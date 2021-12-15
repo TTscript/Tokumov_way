@@ -1,0 +1,40 @@
+@mixin list-null() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin standart-flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin regular-fonts() {
+  font-family: "Montserrat Regular", "Arial", "sans-serif";
+  font-size: 16px;
+  line-height: 28px;
+  color: $regular-fonts-color;
+}
+
+@mixin medium-fonts() {
+  font-family: "Montserrat Medium", "Arial", "sans-serif";
+  font-size: 24px;
+  line-height: 29px;
+  color: $medium-fonts-color;
+}
+
+@mixin semibold-fonts() {
+  font-family: "Montserrat Semibold", "Arial", "sans-serif";
+  font-size: 55px;
+  line-height: 80px;
+  color: $semibold-fonts-color;
+}
+
+
+@mixin bold-fonts() {
+  font-family: "Montserrat Bold", "Arial", "sans-serif";
+  font-size: 25px;
+  line-height: 34px;
+  color: $bold-fonts-color;
+}

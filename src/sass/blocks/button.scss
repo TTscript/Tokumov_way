@@ -1,0 +1,21 @@
+.button {
+  @include bold-fonts();
+  @include standart-flex();
+  font-size: 12px;
+  line-height: 15px;
+  min-width: 340px;
+  min-height: 75px;
+  text-transform: uppercase;
+  background-color: $button-color;
+  border: 0;
+  color: $page-white-color;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 10px 30px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: $hover-color;
+  transition: 0.2s;
+}
