@@ -13,6 +13,11 @@
   margin: 0;
   padding: 10px 30px;
   transition: 0.2s;
+  @media (max-width: $max-tablet-width) {
+    font-family: "Montserrat Medium", "Arial", "sans-serif";
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 .button:hover {

@@ -1,7 +1,9 @@
 .contact-us {
-  max-width: 1170px;
-  margin: 0 auto 160px auto;
-  padding: 0 50px;
+  margin: 0 0 160px 0;
+  padding: 0;
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 80px 0;
+  }
 }
 
 .contact-us__shape-wrapper {
@@ -11,13 +13,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px;
+  max-width: 1170px;
 }
 
 .contact-us__shape {
   background-color: $page-white-color;
-  max-width: 656px;
+  min-width: 656px;
   min-height: 315px;
   padding: 50px;
   box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);;
@@ -37,21 +40,36 @@
 }
 
 .contact-us__text {
+  text-align: center;
   margin: 0 0 24px 0;
   padding: 0;
 }
 
 .contact-us__enter-data-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   margin: 0 0 25px 0;
   padding: 0;
+  position: relative;
+
+  &::before {
+    content: "*";
+    color: $page-underline-color;
+    position: absolute;
+    top: 4px;
+    left: 15px;
+  }
 }
 
 .contact-us input {
+  font-family: inherit;
+  font-size: 14px;
   min-height: 50px;
-  min-width: 49.5%;
+  min-width: 48%;
   border: $input-border;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 26px;
 }
 
 .contact-us__submit {
@@ -59,3 +77,8 @@
   min-height: 50px;
   margin: 0 auto;
 }
+
+
+
+
+

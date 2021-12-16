@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Путешествие по Европе</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
@@ -12,6 +12,13 @@
     <header class="page-header">
       <div class="page-header__inner">
         <a href="#" class="page-header__logo"><img src="img/header/logo.svg" width="57" height="22" alt="Логотип компании" class="page-header__img"></a>
+        <div class="burger">
+          <div class="burger__inner">
+            <div class="burger__top-line"></div>
+            <div class="burger__middle-line"></div>
+            <div class="burger__bottom-line"></div>
+          </div>
+        </div>
         <div class="page-header__text-block">
           <ul class="page-header__list">
             <li class="page-header__list-item"><a href="#">О путешествии</a></li>
@@ -71,6 +78,7 @@
         </div>
       </section>
       <section class="reviews">
+        <h2 class="visually-hidden">Отзывы о турах</h2>
         <div class="reviews__list-wrapper">
           <div class="reviews__bottom-line">
             <ul class="reviews__list">
@@ -85,12 +93,15 @@
         <div class="reviews__background">
           <div class="reviews__inner">
             <div class="reviews__about">
-              <h2 class="reviews__title">Греция</h2>
+              <h3 class="reviews__title">Греция</h3>
               <p class="reviews__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
               <button class="reviews__button button">купить тур сейчас</button>
             </div>
             <div class="reviews__img-block">
-              <img src="img/reviews/greece.jpg" alt="Греция" class="reviews__img">
+              <picture>
+                <source srcset="img/reviews/greece-tablet.jpg" media="(max-width: 1023px)">
+                <img src="img/reviews/greece.jpg" width="430" height="596" alt="Греция" class="reviews__img">
+              </picture>
             </div>
             <div class="reviews__review">
               <h3 class="reviews__review-title">Отзывы</h3>
@@ -101,34 +112,38 @@
         </div>
       </section>
       <section class="prices">
-        <div class="prices__complex">
-          <h3 class="prices__complex-title">Комплексный $1999</h3>
-          <p class="prices__complex-text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-          <ul class="prices__complex-list">
-            <li class="prices__complex-list-item">Разработанный маршрут с гидом группы</li>
-            <li class="prices__complex-list-item">Перелет, трансфер и проживание в отелях</li>
-            <li class="prices__complex-list-item">Завтраки, ужины в отелях и ланчи на природе</li>
-            <li class="prices__complex-list-item">Экскурсии по удивительно красивым местам Европы</li>
-          </ul>
-          <button class="prices__complex-button button">купить тур сейчас</button>
-        </div>
-        <div class="prices__econom">
-          <h3 class="prices__econom-title">Экономный $1399</h3>
-          <p class="prices__econom-text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-          <ul class="prices__econom-list">
-            <li class="prices__econom-list-item">Разработанный маршрут с гидом группы</li>
-            <li class="prices__econom-list-item">Перелет и трансфер</li>
-            <li class="prices__econom-list-item">Проживание в хостелах при отелях</li>
-            <li class="prices__econom-list-item">Только завтраки в отелях</li>
-            <li class="prices__econom-list-item">Экскурсии по удивительно красивым местам Европы</li>
-          </ul>
-          <button class="prices__econom-button button">купить тур сейчас</button>
-        </div>
-        <div class="prices__info">
-          <h2 class="prices__title">Цены</h2>
-          <p class="prices__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
-          <p class="prices__call-us">Свяжитесь с нами</p>
-          <p class="prices__phone"><a href="tel:+749978468446" class="prices__phone-number">+7 (499) -784-684-46</a></p>
+        <div class="prices__center-container">
+          <div class="prices__inner">
+            <div class="prices__info">
+              <h2 class="prices__title">Цены</h2>
+              <p class="prices__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>
+              <p class="prices__call-us">Свяжитесь с нами</p>
+              <p class="prices__phone"><a href="tel:+749978468446" class="prices__phone-number">+7 (499) -784-684-46</a></p>
+            </div>
+            <div class="prices__complex">
+              <h3 class="prices__complex-title">Комплексный $1999</h3>
+              <p class="prices__complex-text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+              <ul class="prices__complex-list">
+                <li class="prices__complex-list-item">Разработанный маршрут с гидом группы</li>
+                <li class="prices__complex-list-item">Перелет, трансфер и проживание в отелях</li>
+                <li class="prices__complex-list-item">Завтраки, ужины в отелях и ланчи на природе</li>
+                <li class="prices__complex-list-item">Экскурсии по удивительно красивым местам Европы</li>
+              </ul>
+              <button class="prices__complex-button button">купить тур сейчас</button>
+            </div>
+            <div class="prices__econom">
+              <h3 class="prices__econom-title">Экономный $1399</h3>
+              <p class="prices__econom-text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+              <ul class="prices__econom-list">
+                <li class="prices__econom-list-item">Разработанный маршрут с гидом группы</li>
+                <li class="prices__econom-list-item">Перелет и трансфер</li>
+                <li class="prices__econom-list-item">Проживание в хостелах при отелях</li>
+                <li class="prices__econom-list-item">Только завтраки в отелях</li>
+                <li class="prices__econom-list-item">Экскурсии по удивительно красивым местам Европы</li>
+              </ul>
+              <button class="prices__econom-button button">купить тур сейчас</button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contact-us">
@@ -139,8 +154,8 @@
               <legend class="contact-us__title">У Вас остались вопросы?</legend>
               <p class="contact-us__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
               <p class="contact-us__enter-data-wrapper">
-                <input class="contact-us__enter-phone-number" type="text" name="phone-number">
-                <input class="contact-us__enter-email" type="text" name="email">
+                <input class="contact-us__enter-phone-number" type="text" name="phone-number"  value="+7 Введите 10 цифр номера">
+                <input class="contact-us__enter-email" type="text" name="email" value="E-mail">
               </p>
               <button class="contact-us__submit button">отправить</button>
             </fieldset>

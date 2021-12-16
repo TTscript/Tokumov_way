@@ -1,9 +1,114 @@
 .prices {
-  display: flex;
-  align-items: center;
-  margin: -300px auto 103px auto;
+  margin: -300px 0 103px 0;
   padding: 0 50px;
+  position: relative;
+  @media (max-width: $max-tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.prices__center-container {
   max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.prices__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  column-gap: 60px;
+  row-gap: 60px;
+}
+
+.prices__info {
+  font-size: 20px;
+  line-height: 32px;
+  max-width: 310px;
+  min-height: 460px;
+  margin: 0;
+  padding: 0;
+  order: 1;
+
+  @media (max-width: $max-tablet-width) {
+    display: inline-block;
+    order: 0;
+    max-width: none;
+    min-height: unset;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 40px 0;
+  }
+}
+
+.prices__title {
+  @include semibold-fonts();
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      content: "";
+      border-bottom: 4px solid $page-underline-color;
+      display: block;
+      width: 229px;
+      padding: 30px 0 0 0;
+      margin: 0 0 30px 0;
+    }
+  }
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.prices__text {
+  font-size: 16px;
+  line-height: 28px;
+  max-width: 380px;
+  margin: 0 0 60px 0;
+  padding: 0;
+  @media (max-width: $max-tablet-width) {
+    max-width: none;
+    margin: 0 0 30px 0;
+  }
+}
+
+.prices__call-us {
+  @include medium-fonts();
+  font-size: 22px;
+  line-height: 34px;
+  margin: 0 0 13px 0;
+  padding: 0 0 0 50px;
+}
+
+.prices__phone {
+  margin: 0;
+  padding: 0;
+}
+
+.prices__phone-number {
+  color: $page-black-color;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      width: 17px;
+      height: 24px;
+      display: inline-block;
+      background-color: $page-underline-color;
+      -webkit-mask-image: url("../img/header/phone.svg");
+      mask-image: url("../img/header/phone.svg");
+      margin-right: 35px;
+    }
+  }
+
+  @media (max-width: $max-tablet-width) {
+    color: $page-underline-color;
+  }
 }
 
 .prices__complex {
@@ -11,27 +116,40 @@
   border-radius: 6px;
   max-width: 370px;
   min-height: 672px;
-  margin: 0 30px 0 0;
+  margin: 0;
   padding: 40px 30px 30px 30px;
+  @media (max-width: $max-tablet-width) {
+    max-width: 288px;
+    display: inline-block;
+    flex-grow: 1;
+    padding: 0;
+  }
 }
 
 .prices__complex:hover {
   border: 1px solid $page-underline-color;
   outline: 2px solid $page-underline-color;
+
   .prices__complex-title {
     @include semibold-fonts();
     font-size: 28px;
     line-height: 34px;
-    text-align: center;
     color: $page-underline-color;
     margin: 0 5px 40px 0;
     padding: 0;
+    @media (max-width: $max-tablet-width) {
+      padding: 20px 20px 0 20px;
+      font-size: 24px;
+    }
   }
 
   .prices__complex-text {
     &::after {
      content: "";
      border-bottom: 1px solid $page-underline-color;
+    }
+    @media (max-width: $max-tablet-width) {
+      text-align: center;
     }
  }
 
@@ -60,6 +178,10 @@
   color: $bold-fonts-color;
   margin: 0 5px 40px 0;
   padding: 0;
+  @media (max-width: $max-tablet-width) {
+    font-size: 24px;
+    padding: 20px 20px 0 20px;
+  }
 }
 
 
@@ -79,6 +201,10 @@
     margin-bottom: 30px;
     opacity: 0.5;
    }
+   @media (max-width: $max-tablet-width) {
+    padding: 20px 20px 0 20px;
+    text-align: center;
+   }
 }
 
 .prices__complex-list {
@@ -87,6 +213,9 @@
   color: $medium-fonts-color;
   margin: 0 0 66px 0;
   padding: 0;
+  @media (max-width: $max-tablet-width) {
+    padding: 0 20px 0;
+  }
 }
 
 .prices__complex-list-item {
@@ -110,6 +239,11 @@
 .prices__complex-button {
  min-width: 310px;
  justify-content: center;
+ @media (max-width: $max-tablet-width) {
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
 }
 
 .prices__econom {
@@ -117,21 +251,31 @@
   border-radius: 6px;
   max-width: 370px;
   min-height: 672px;
-  margin: 0 40px 0 0;
+  margin: 0;
   padding: 40px 30px 30px 30px;
+  @media (max-width: $max-tablet-width) {
+    display: inline-block;
+    max-width: 288px;
+    flex-grow: 1;
+    padding: 0;
+  }
 }
 
 .prices__econom:hover {
   border: 1px solid $page-underline-color;
   outline: 2px solid $page-underline-color;
+
   .prices__econom-title {
     @include semibold-fonts();
     font-size: 28px;
     line-height: 34px;
-    text-align: center;
     color: $page-underline-color;
     margin: 0 5px 40px 0;
     padding: 0;
+    @media (max-width: $max-tablet-width) {
+      font-size: 24px;
+       padding: 20px 28px 0 28px;
+    }
   }
 
   .prices__econom-text {
@@ -166,6 +310,10 @@
   color: $bold-fonts-color;
   margin: 0 5px 40px 0;
   padding: 0;
+  @media (max-width: $max-tablet-width) {
+    font-size: 24px;
+    padding: 20px 28px 0 28px;
+  }
 }
 
 .prices__econom-text {
@@ -184,6 +332,10 @@
    margin-bottom: 30px;
    opacity: 0.5;
   }
+  @media (max-width: $max-tablet-width) {
+    padding: 20px 20px 0 20px;
+    text-align: center;
+  }
 }
 
 .prices__econom-list {
@@ -192,6 +344,9 @@
   color: $medium-fonts-color;
   margin: 0 0 54px 0;
   padding: 0;
+  @media (max-width: $max-tablet-width) {
+    padding: 0 20px 0;
+  }
 }
 
 .prices__econom-list-item {
@@ -215,66 +370,10 @@
 .prices__econom-button {
   min-width: 310px;
   justify-content: center;
-}
-
-.prices__info {
-  font-size: 20px;
-  line-height: 32px;
-  max-width: 310px;
-  min-height: 460px;
-  margin: 0;
-  padding: 0;
-}
-
-.prices__title {
-  @include semibold-fonts();
-  margin: 0;
-  padding: 0;
-
-  &::after {
-    content: "";
-    border-bottom: 4px solid $page-underline-color;
-    display: block;
-    width: 229px;
-    padding: 30px 0 0 0;
-    margin: 0 0 30px 0;
+  @media (max-width: $max-tablet-width) {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
-.prices__text {
-  font-size: 16px;
-  line-height: 28px;
-  min-width: 380px;
-  margin: 0 0 60px 0;
-  padding: 0;
-}
-
-.prices__call-us {
-  @include medium-fonts();
-  font-size: 22px;
-  line-height: 34px;
-  margin: 0 0 13px 0;
-  padding: 0 0 0 50px;
-}
-
-.prices__phone {
-  margin: 0;
-  padding: 0;
-}
-
-.prices__phone-number {
-  color: $page-black-color;
-  margin: 0;
-  padding: 0;
-
-  &::before {
-    content: "";
-    width: 17px;
-    height: 24px;
-    display: inline-block;
-    background-color: $page-underline-color;
-    -webkit-mask-image: url("../img/header/phone.svg");
-    mask-image: url("../img/header/phone.svg");
-    margin-right: 35px;
-  }
-}

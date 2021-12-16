@@ -1,6 +1,12 @@
 .corporate-travelling {
   margin: 0;
   padding: 0;
+  flex-grow: 1;
+  width: 33.33%;
+  @media (max-width: $max-tablet-width) {
+    border-top: $footer-right-border;
+    width: 100%;
+  }
 }
 
 .corporate-travelling__title {
@@ -9,11 +15,20 @@
   line-height: 32px;
   margin: 0 0 21px 0;
   padding: 0;
+  @media (max-width: $max-tablet-width) {
+    text-align: center;
+    padding-top: 30px;
+  }
 }
+
 .corporate-travelling__text {
   font-size: 14px;
-  line-height: 18px;
-  margin: 0 50px 0 0;
+  line-height: 24px;
+  margin: 0;
   padding: 0;
   max-width: 365px;
+  @media (max-width: $max-tablet-width) {
+    text-align: center;
+    max-width: none;
+  }
 }

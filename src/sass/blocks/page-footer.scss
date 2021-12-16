@@ -1,11 +1,18 @@
 .page-footer {
-  max-width: 1170px;
-  margin: 0 auto;
+  margin: 0 0 74px 0;
   padding: 0 50px;
+  @media (max-width: $max-tablet-width) {
+    padding: 0 21px;
+  }
 }
 
 .page-footer__group {
-  @include standart-flex();
-  align-items: flex-start;
+  display: flex;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  @media (max-width: $max-tablet-width) {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
 }
-

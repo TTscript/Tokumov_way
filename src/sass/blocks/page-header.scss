@@ -2,6 +2,10 @@
   min-width: 100%;
   margin: 0 0 41px 0;
   padding: 0 50px;
+  @media (max-width: $max-tablet-width) {
+    padding: 0 0 0 21px;
+    margin-bottom: 0;
+  }
 }
 
 .page-header__inner {
@@ -13,6 +17,9 @@
 
 .page-header__text-block {
   @include standart-flex();
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__list {
@@ -68,5 +75,4 @@
     top: 0;
     left: -35px;
   }
-
 }
