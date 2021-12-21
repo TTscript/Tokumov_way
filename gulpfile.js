@@ -72,6 +72,20 @@ function js() {
     .pipe(dest('build/js'));
 }
 
+function devcss() {
+  return src('src/sass/style.scss')
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions']
+    }))
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('src/css/'));
+}
+
+exports.devcss = devcss;
 exports.clear = clear;
 exports.build = series(clear, copy, html, style, js);
 exports.default = series(clear, copy, html, style, js, server);
