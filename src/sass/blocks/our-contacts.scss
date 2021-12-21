@@ -4,11 +4,18 @@
   min-height: 190px;
   padding: 0;
   flex-grow: 1;
-  width: 33.33%;
+  width: 30.33%;
+
   @media (max-width: $max-tablet-width) {
     border-right: none ;
-    width: 40%;
+    width: 33%;
     margin: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    min-height: unset;
+    margin: 0 0 22px 0;
   }
 }
 
@@ -18,6 +25,11 @@
   line-height: 32px;
   margin: 0 0 21px 0;
   padding: 0;
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+    margin: 0 0 22px 0;
+  }
 }
 
 .our-contacts__email {
@@ -44,7 +56,7 @@
 .our-contacts__phone-number {
   color: $page-underline-color;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
 
   &::before {
@@ -59,15 +71,38 @@
     mask-repeat: no-repeat;
     margin: 0;
     padding: 0 0 0 41px;
+
+    @media (max-width: $max-mobile-width) {
+      padding: 0 0 0 34px;
+    }
+  }
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    line-height: 32px;
+    text-align: left;
   }
 }
 
 .our-contacts__email-wrapper {
-  margin: 0 0 23px 0;
+  margin: 0 0 15px 0;
   padding: 0;
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+    padding-left: 10px;
+    margin: 0 0 17px 0;
+  }
 }
 
 .our-contacts__phone-wrapper {
   margin: 0;
   padding: 0;
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+  }
 }

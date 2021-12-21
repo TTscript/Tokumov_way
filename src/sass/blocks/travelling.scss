@@ -1,19 +1,46 @@
 .travelling {
   margin: 0 0 200px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 80px 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 0 83px 0;
+  }
+}
+
+.travelling__background {
   background-image: url("../img/background/travelling.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
   min-height: 860px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
+  padding: 187px 0 0 0;
+
   @media (max-width: $max-tablet-width) {
-    margin-bottom: 80px;
+    min-height: 344px;
+    background-image: url("../img/background/travelling-tablet.jpg");
+    display: block;
+    padding: 61px 0 0 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/background/travelling-mobile.jpg");
+    min-height: 235px;
+    margin: 0px 0 20px 0;
+    padding: 83px 16px 0 20px;
   }
 }
 
 .travelling__inner {
   max-width: 400px;
-  margin-right: 400px;
+  margin-right: 445px;
+
   @media (max-width: $max-tablet-width) {
     display: flex;
     flex-direction: column;
@@ -27,19 +54,54 @@
 
 .travelling__title {
   @include semibold-fonts();
+  letter-spacing: -1.1px;
+  text-align: left;
   color: $page-white-color;
-  margin: 0 0 30px 0;
+  margin: 0 0 26px 0;
   padding: 0;
+
   @media (max-width: $max-tablet-width) {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 45px;
+    margin: 0 0 15px 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+    font-size: 26px;
+    line-height: 36px;
   }
 }
 
 .travelling__text {
   color: $page-white-color;
-  margin: 0 0 39px 0;
+  letter-spacing: -0.47px;
+  max-width: 85%;
+  margin: 0 0 30px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    margin: 0 0 8px 0;
+    max-width: 95%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.travelling__button.button {
+  @media (max-width: $max-tablet-width) {
+    min-height: 50px;
+    min-width: 250px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
 }
 
 .travelling__button-arrow {
@@ -50,5 +112,56 @@
     height: 17px;
     display: inline-block;
     padding: 0;
+
+    @media (max-width: $max-tablet-width) {
+      background: url("../img/travelling/arrow-tablet.svg") no-repeat;
+    }
   }
+}
+
+.travelling__text-mobile {
+  display: none;
+
+  @media (max-width: $max-mobile-width) {
+    display: block;
+    text-align: center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    letter-spacing: -0.46px;
+    line-height: 27px;
+    margin: 0 0 19px 0;
+    padding: 0 16px;
+  }
+}
+
+.travelling__button-mobile.button {
+  display: none;
+  letter-spacing: 2px;
+  padding-left: 10px;
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: flex;
+    min-width: 288px;
+    min-height: 50px;
+    margin: 0 auto;
+  }
+}
+
+.travelling__button-text {
+  @media (max-width: $max-tablet-width) {
+    padding-left: 10px;
+  }
+  @media (max-width: $max-mobile-width) {
+    padding: 5px 0 0 30px;
+  }
+}
+
+.travelling__button-arrow {
+  padding: 7px 9px 0 0;
 }

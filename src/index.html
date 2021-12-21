@@ -11,18 +11,40 @@
   <div class="center-container">
     <header class="page-header">
       <div class="page-header__inner">
-        <a href="#" class="page-header__logo"><img src="img/header/logo.svg" width="57" height="22" alt="Логотип компании" class="page-header__img"></a>
-        <div class="burger">
-          <div class="burger__inner">
-            <div class="burger__top-line"></div>
-            <div class="burger__middle-line"></div>
-            <div class="burger__bottom-line"></div>
+        <div class="page-header__logo-wrapper">
+          <a href="#" class="page-header__logo">
+            <picture>
+              <source srcset="img/header/logo.svg" media="(max-width: 1023px)">
+              <source srcset="img/header/logo.svg" media="(max-width: 767px)">
+              <img src="img/header/logo.svg" width="57" height="22" alt="Логотип компании" class="page-header__img">
+            </picture>
+          </a>
+        </div>
+        <div class="burger-closed">
+          <div class="burger-closed__inner">
+            <div class="burger-closed__top-line"></div>
+            <div class="burger-closed__middle-line"></div>
+            <div class="burger-closed__bottom-line"></div>
+          </div>
+        </div>
+        <div class="burger-open">
+          <div class="burger-open__menu">
+            <div class="burger-open__menu-inner">
+              <div class="burger-open__first-line"></div>
+              <div class="burger-open__second-line"></div>
+            </div>
+          </div>
+          <div class="burger-open__list-item-wrapper">
+            <p class="burger-open__list-item"><a href="#places">O путешествии</a></p>
+          </div>
+          <div class="burger-open__list-item-wrapper">
+            <p class="burger-open__list-item"><a href="#prices">Цены</a></p>
           </div>
         </div>
         <div class="page-header__text-block">
           <ul class="page-header__list">
-            <li class="page-header__list-item"><a href="#">О путешествии</a></li>
-            <li class="page-header__list-item"><a href="#">Цены</a></li>
+            <li class="page-header__list-item"><a href="#places">О путешествии</a></li>
+            <li class="page-header__list-item"><a href="#prices">Цены</a></li>
           </ul>
           <a href="tel:+749978468446" class="page-header__phone">+7 (499) -784-684-46</a>
         </div>
@@ -30,63 +52,115 @@
     </header>
     <main class="page-main">
       <section class="travelling">
-        <div class="travelling__inner">
-          <h1 class="travelling__title">Путешествие по Европе</h1>
-          <p class="travelling__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-          <button class="travelling__button button">
-            <span class="travelling__button-text">смотреть тур</span>
-            <span class="travelling__button-arrow"></span>
-          </button>
+        <div class="travelling__background">
+          <div class="travelling__inner">
+            <h1 class="travelling__title">Путешествие по Европе</h1>
+            <p class="travelling__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+            <button class="travelling__button button">
+              <span class="travelling__button-text">смотреть тур</span>
+              <span class="travelling__button-arrow"></span>
+            </button>
+          </div>
         </div>
+        <p class="travelling__text-mobile">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+        <button class="travelling__button-mobile button">
+          <span class="travelling__button-text">смотреть тур</span>
+          <span class="travelling__button-arrow"></span>
+        </button>
       </section>
-      <section class="places">
+      <section class="places" id="places">
         <div class="places__inner">
           <h2 class="places__title">Места посещения</h2>
           <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
           <div class="places__img-wrapper">
             <div class="places__img-card">
-              <img src="img/places/greece.jpg" alt="Греция" class="places__img">
-              <div class="places__country-wrapper">
-                <h3 class="places__country">Греция</h3>
-              </div>
+              <a class="places__img-card-anchor" href="#reviews">
+                <picture>
+                  <source srcset="../img/places/greece-tablet.jpg" media="(max-width: 1023px)">
+                  <source srcset="img/places/greece-mobile.jpg" media="(max-width: 767px)">
+                  <img src="img/places/greece.jpg" width="350" height="430" alt="Греция" class="places__img">
+                </picture>
+                <div class="places__white-button places__white-button-greece" data-name="greece">
+                  <p class="places__white-button-text">смотреть подробнее</p>
+                </div>
+                <div class="places__country-wrapper">
+                  <h3 class="places__country">Греция</h3>
+                </div>
+              </a>
             </div>
             <div class="places__img-card">
-              <img src="img/places/albania.jpg" alt="Греция" class="places__img">
-              <div class="places__country-wrapper">
-                <h3 class="places__country">Албания</h3>
-              </div>
+              <a href="#reviews" class="places__img-card-anchor">
+                <picture>
+                  <source srcset="../img/places/albania-tablet.jpg" media="(max-width: 1023px)">
+                  <source srcset="../img/places/albania-mobile.jpg" media="(max-width: 767px)">
+                  <img src="img/places/albania.jpg" width="350" height="430" alt="Греция" class="places__img">
+                </picture>
+                <div class="places__white-button places__white-button-albania" data-name="albania">
+                  <p class="places__white-button-text">смотреть подробнее</p>
+                </div>
+                <div class="places__country-wrapper">
+                  <h3 class="places__country">Албания</h3>
+                </div>
+              </a>
             </div>
             <div class="places__img-card">
-              <img src="img/places/macedonia.jpg" alt="Греция" class="places__img">
-              <div class="places__country-wrapper">
-                <h3 class="places__country">Македония</h3>
-              </div>
+              <a href="#reviews" class="places__img-card-anchor">
+                <picture>
+                  <source srcset="../img/places/macedonia-tablet.jpg" media="(max-width: 1023px)">
+                  <source srcset="../img/places/macedonia-mobile.jpg" media="(max-width: 767px)">
+                  <img src="img/places/macedonia.jpg" width="350" height="430" alt="Греция" class="places__img">
+                </picture>
+                <div class="places__white-button places__white-button-macedonia" data-name="macedonia">
+                  <p class="places__white-button-text">смотреть подробнее</p>
+                </div>
+                <div class="places__country-wrapper">
+                  <h3 class="places__country">Македония</h3>
+                </div>
+              </a>
             </div>
             <div class="places__img-card">
-              <img src="img/places/montenegro.jpg" alt="Греция" class="places__img">
-              <div class="places__country-wrapper">
-                <h3 class="places__country">Черногория</h3>
-              </div>
+              <a href="#reviews" class="places__img-card-anchor">
+                <picture>
+                  <source srcset="../img/places/montenegro-tablet.jpg" media="(max-width: 1023px)">
+                  <source srcset="../img/places/montenegro-mobile.jpg" media="(max-width: 767px)">
+                  <img src="img/places/montenegro.jpg" width="350" height="430" alt="Греция" class="places__img">
+                </picture>
+                <div class="places__white-button places__white-button-montenegro" data-name="montenegro">
+                  <p class="places__white-button-text">смотреть подробнее</p>
+                </div>
+                <div class="places__country-wrapper">
+                  <h3 class="places__country">Черногория</h3>
+                </div>
+              </a>
             </div>
             <div class="places__img-card">
-              <img src="img/places/croatia.jpg" alt="Греция" class="places__img">
-              <div class="places__country-wrapper">
-                <h3 class="places__country">Хорватия</h3>
-              </div>
+              <a href="#reviews" class="places__img-card-anchor">
+                <picture>
+                  <source srcset="../img/places/croatia-tablet.jpg" media="(max-width: 1023px)">
+                  <source srcset="../img/places/croatia-mobile.jpg" media="(max-width: 767px)">
+                  <img src="img/places/croatia.jpg" width="350" height="430" alt="Греция" class="places__img">
+                </picture>
+                <div class="places__white-button places__white-button-croatia" data-name="croatia">
+                  <p class="places__white-button-text">смотреть подробнее</p>
+                </div>
+                <div class="places__country-wrapper">
+                  <h3 class="places__country">Хорватия</h3>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <h2 class="visually-hidden">Отзывы о турах</h2>
         <div class="reviews__list-wrapper">
           <div class="reviews__bottom-line">
             <ul class="reviews__list">
-              <li class="reviews__list-item reviews__list-item--on">Греция</li>
-              <li class="reviews__list-item">Албания</li>
-              <li class="reviews__list-item">Македония</li>
-              <li class="reviews__list-item">Черногория</li>
-              <li class="reviews__list-item">Хорватия</li>
+              <li class="reviews__list-item reviews__list-item-greece reviews__list-item--on" data-name="greece">Греция</li>
+              <li class="reviews__list-item reviews__list-item-albania" data-name="albania">Албания</li>
+              <li class="reviews__list-item reviews__list-item-macedonia" data-name="macedonia">Македония</li>
+              <li class="reviews__list-item reviews__list-item-montenegro" data-name="montenegro">Черногория</li>
+              <li class="reviews__list-item reviews__list-item-croatia" data-name="croatia">Хорватия</li>
             </ul>
           </div>
         </div>
@@ -99,7 +173,8 @@
             </div>
             <div class="reviews__img-block">
               <picture>
-                <source srcset="img/reviews/greece-tablet.jpg" media="(max-width: 1023px)">
+                <source srcset="img/reviews/greece.jpg" media="(max-width: 1023px)">
+                <source srcset="img/reviews/greece-mobile.jpg" media="(max-width: 767px)">
                 <img src="img/reviews/greece.jpg" width="430" height="596" alt="Греция" class="reviews__img">
               </picture>
             </div>
@@ -111,7 +186,7 @@
           </div>
         </div>
       </section>
-      <section class="prices">
+      <section class="prices" id="prices">
         <div class="prices__center-container">
           <div class="prices__inner">
             <div class="prices__info">
@@ -121,7 +196,7 @@
               <p class="prices__phone"><a href="tel:+749978468446" class="prices__phone-number">+7 (499) -784-684-46</a></p>
             </div>
             <div class="prices__complex">
-              <h3 class="prices__complex-title">Комплексный $1999</h3>
+              <h3 class="prices__complex-title">Комплексный<span class="prices__complex-title-price">$1999</span></h3>
               <p class="prices__complex-text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
               <ul class="prices__complex-list">
                 <li class="prices__complex-list-item">Разработанный маршрут с гидом группы</li>
@@ -132,7 +207,7 @@
               <button class="prices__complex-button button">купить тур сейчас</button>
             </div>
             <div class="prices__econom">
-              <h3 class="prices__econom-title">Экономный $1399</h3>
+              <h3 class="prices__econom-title">Экономный<span class="prices__econom-title-price">$1399</span></h3>
               <p class="prices__econom-text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
               <ul class="prices__econom-list">
                 <li class="prices__econom-list-item">Разработанный маршрут с гидом группы</li>
@@ -149,13 +224,13 @@
       <section class="contact-us">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="contact-us__shape-wrapper">
-          <form class="contact-us__shape" action="#" method="post">
+          <form id="shape" class="contact-us__shape" action="#" method="post">
             <fieldset class="contact-us__shape-inner">
               <legend class="contact-us__title">У Вас остались вопросы?</legend>
               <p class="contact-us__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
               <p class="contact-us__enter-data-wrapper">
-                <input class="contact-us__enter-phone-number" type="text" name="phone-number"  value="+7 Введите 10 цифр номера">
-                <input class="contact-us__enter-email" type="text" name="email" value="E-mail">
+                <input id="tel" class="contact-us__enter-phone-number" type="tel" name="tel" value="+7 Введите 10 цифр номера" pattern="[0-9]{11}" required>
+                <input id="email" class="contact-us__enter-email" type="email" name="email" placeholder="E-mail">
               </p>
               <button class="contact-us__submit button">отправить</button>
             </fieldset>
@@ -209,5 +284,6 @@
       </div>
     </footer>
   </div>
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>

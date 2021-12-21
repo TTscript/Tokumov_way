@@ -1,4 +1,6 @@
-// visually-hidden
+html {
+  scroll-behavior: smooth;
+}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -15,22 +17,16 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-// border-box
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
 
-// images
-
 img {
   max-width: 100%;
   height: auto;
 }
-
-// a
 
 a {
   text-decoration: none;

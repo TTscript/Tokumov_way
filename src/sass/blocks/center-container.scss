@@ -4,6 +4,9 @@
   max-width: 1920px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 36px 0 0 0;
+  padding: 26px 0 0 0;
   background-color: $center-container-color;
+  @media (max-width: $max-tablet-width) {
+    padding: 0;
+  }
 }

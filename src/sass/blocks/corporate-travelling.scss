@@ -1,11 +1,15 @@
 .corporate-travelling {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 30px;
   flex-grow: 1;
   width: 33.33%;
+
   @media (max-width: $max-tablet-width) {
     border-top: $footer-right-border;
     width: 100%;
+  }
+  @media (max-width: $max-mobile-width) {
+    padding: 0;
   }
 }
 
@@ -15,6 +19,7 @@
   line-height: 32px;
   margin: 0 0 21px 0;
   padding: 0;
+
   @media (max-width: $max-tablet-width) {
     text-align: center;
     padding-top: 30px;
@@ -26,7 +31,8 @@
   line-height: 24px;
   margin: 0;
   padding: 0;
-  max-width: 365px;
+  max-width: 320px;
+
   @media (max-width: $max-tablet-width) {
     text-align: center;
     max-width: none;

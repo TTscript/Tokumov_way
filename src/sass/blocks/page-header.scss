@@ -1,10 +1,15 @@
 .page-header {
   min-width: 100%;
-  margin: 0 0 41px 0;
-  padding: 0 50px;
+  margin: 0 0 32px 0;
+  padding: 10px 50px 0 50px;
+
   @media (max-width: $max-tablet-width) {
     padding: 0 0 0 21px;
     margin-bottom: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 0 0 0 12px;
   }
 }
 
@@ -12,11 +17,32 @@
   @include standart-flex();
   max-width: 1170px;
   margin: 0 auto;
+  transition: 1s all;
+}
+
+.page-header__logo-wrapper {
+  margin: 0;
+}
+
+.page-header__logo {
+  display: block;
+}
+
+.page-header__img {
+  width: 66px;
+  display: block;
+  margin: 0;
   padding: 0;
+
+  @media (max-width: $max-tablet-width) {
+    height: 22px;
+    width: 57px;
+  }
 }
 
 .page-header__text-block {
   @include standart-flex();
+
   @media (max-width: $max-tablet-width) {
     display: none;
   }
@@ -25,8 +51,10 @@
 .page-header__list {
   @include list-null();
   @include standart-flex();
-  color: $header-text-color;
-  margin: 0 106px 0 0;
+  @include medium-fonts();
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 110px 0 0;
   padding: 0;
 }
 
@@ -39,11 +67,17 @@
   }
 }
 
+.page-header__list a {
+  color: $header-text-color;
+}
+
 .page-header__list-item:hover a {
   color: $hover-color;
 }
 
 .page-header__phone {
+  font-size: 18px;
+  line-height: 32px;
   position: relative;
   color: $header-text-color;
   text-decoration: underline;

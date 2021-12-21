@@ -3,14 +3,33 @@
   margin: 0 30px 0 0;
   padding: 0;
   flex-grow: 1;
-  width: 33.33%;
+  width: 36%;
+  margin: 0 62px 0 0;
+
   @media (max-width: $max-tablet-width) {
-    width: 50%;
+    width: 49%;
+    margin: 0 49px 0 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    border-right: none;
+    border-bottom: $footer-right-border;
+    margin: 0;
+    margin-bottom: 29px;
+    padding-bottom: 21px;
   }
 }
 
 .next-travelling__inner {
   display: flex;
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 77px;
+    row-gap: 8px;
+  }
 }
 
 .next-travelling__title {
@@ -19,17 +38,37 @@
   line-height: 32px;
   margin: 0 0 20px 0;
   padding: 0;
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+  }
 }
 
 .next-travelling__list {
   @include list-null();
   font-size: 14px;
   line-height: 18px;
-  margin: 0 20px 0 0;
+  margin: 0 51px 0 0;
   padding: 0;
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 48px 0 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .next-travelling__list-item {
   margin: 0 0 10px 0;
   padding: 0;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 0 9px 0;
+  }
 }
