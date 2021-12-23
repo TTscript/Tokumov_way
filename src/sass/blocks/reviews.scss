@@ -67,6 +67,7 @@
 }
 
 .reviews__bottom-line {
+  position: relative;
   display: inline-block;
   border-bottom: $reviews-list-inderline;
   margin: 0;

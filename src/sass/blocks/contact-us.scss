@@ -117,6 +117,12 @@
     position: absolute;
     top: 4px;
     left: 15px;
+    @media (max-width: $max-tablet-width) {
+      left: 65px;
+    }
+    @media (max-width: $max-mobile-width) {
+      left: 15px;
+    }
   }
 }
 

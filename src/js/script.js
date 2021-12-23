@@ -3,6 +3,7 @@
 import { tabsActive } from './tabs.js';
 import './burger-menu.js';
 import './validation.js';
+import './swipe-menu.js';
 
 tabsActive();
 
