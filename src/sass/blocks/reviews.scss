@@ -210,11 +210,8 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    object-fit: none;
-    min-width: unset;
+    object-fit: cover;
     height: 414px;
-    width: 100%;
-
   }
 }
 

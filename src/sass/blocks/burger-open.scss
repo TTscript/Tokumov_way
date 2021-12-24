@@ -4,12 +4,12 @@
   @media (max-width: $max-tablet-width) {
     display: block;
     position: absolute;
-    top: 36px;
+    top: 0;
     right: 0;
     width: 320px;
     height: 568px;
     transition: 1s;
-    background-color: $page-white-color;
+    background-color: transparent;
   }
 }
 
@@ -24,29 +24,29 @@
   padding: 0 20px 0 0;
 }
 
-.burger-open__menu-inner {
-  width: 22px;
-  height: 22px;
-  overflow: hidden;
-}
+// .burger-open__menu-inner {
+//   width: 22px;
+//   height: 22px;
+//   overflow: hidden;
+// }
 
-.burger-open__first-line {
-  border: $burger-open-border;
-  transform: rotate(135deg);
-  position: relative;
-  top: 7px;
-  left: -8px;
-  width: 200%;
-}
+// .burger-open__first-line {
+//   border: $burger-open-border;
+//   transform: rotate(135deg);
+//   position: relative;
+//   top: 7px;
+//   left: -8px;
+//   width: 200%;
+// }
 
-.burger-open__second-line {
-  border: $burger-open-border;
-  transform: rotate(-135deg);
-  position: relative;
-  top: 11px;
-  right: 8px;
-  width: 200%;
-}
+// .burger-open__second-line {
+//   border: $burger-open-border;
+//   transform: rotate(-135deg);
+//   position: relative;
+//   top: 11px;
+//   right: 8px;
+//   width: 200%;
+// }
 
 .burger-open__list-item-wrapper {
   background-color: $burger-open-list-item-wrapper;
@@ -83,6 +83,5 @@
 }
 
 .burger-open__action {
-  display: none;
-  transform: translateX(100%);
+  transform: translateX(300%);
 }
