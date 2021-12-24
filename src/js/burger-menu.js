@@ -3,7 +3,6 @@
 const burgerClosed = document.querySelector('.burger-closed');
 const burgerOpen = document.querySelector('.burger-open');
 const burgerOpenMenu = document.querySelector('.burger-open__menu');
-const burgerLines = Array.from(document.querySelectorAll('.burger-closed__line'));
 const burgerTop = document.querySelector('.burger-closed__top-line');
 const burgerBottom = document.querySelector('.burger-closed__bottom-line');
 const burgerMiddle = document.querySelector('.burger-closed__middle-line');

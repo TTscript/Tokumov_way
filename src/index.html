@@ -9,7 +9,7 @@
     <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-semiBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font">
   </head>
 <body class="page-body">
   <div class="center-container">
@@ -177,8 +177,8 @@
             </div>
             <div class="reviews__img-block">
               <picture>
-                <source srcset="img/reviews/greece.jpg" media="(max-width: 1023px)">
-                <source srcset="img/reviews/greece-mobile.jpg" media="(max-width: 767px)">
+                <source class="reviews__img-tablet" srcset="img/reviews/greece.jpg" media="(max-width: 1023px)">
+                <source class="reviews__img-mobile" srcset="img/reviews/greece-mobile.jpg" media="(max-width: 767px)">
                 <img src="img/reviews/greece.jpg" width="430" height="596" alt="Греция" class="reviews__img">
               </picture>
             </div>
@@ -232,6 +232,7 @@
             <fieldset class="contact-us__shape-inner">
               <legend class="contact-us__title">У Вас остались вопросы?</legend>
               <p class="contact-us__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+              <div class="contact-us__error-phone-input"></div>
               <p class="contact-us__enter-data-wrapper">
                 <input id="tel" class="contact-us__enter-phone-number" type="tel" name="tel" value="+7 Введите 10 цифр номера" pattern="[0-9]{11}" required>
                 <input id="email" class="contact-us__enter-email" type="email" name="email" placeholder="E-mail">
