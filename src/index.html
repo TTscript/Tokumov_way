@@ -6,10 +6,10 @@
     <title>Путешествие по Европе</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font">
+    <!-- <link rel="preload" href="fonts/montserrat-bold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/montserrat-medium.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" type="font/woff2" as="font"> -->
   </head>
 <body class="page-body">
   <div class="center-container">
@@ -228,15 +228,20 @@
       <section class="contact-us">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <div class="contact-us__shape-wrapper">
-          <form id="shape" class="contact-us__shape" action="#" method="post">
+          <form id="shape" class="contact-us__shape" action="#" method="post" novalidate>
             <fieldset class="contact-us__shape-inner">
               <legend class="contact-us__title">У Вас остались вопросы?</legend>
               <p class="contact-us__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-              <div class="contact-us__error-phone-input"></div>
-              <p class="contact-us__enter-data-wrapper">
-                <input id="tel" class="contact-us__enter-phone-number" type="tel" name="tel" value="+7 Введите 10 цифр номера" pattern="[0-9]{11}" required>
-                <input id="email" class="contact-us__enter-email" type="email" name="email" placeholder="E-mail">
-              </p>
+              <div class="contact-us__input-wrapper">
+                <div class="contact-us__enter-phone-number">
+                  <div class="contact-us__error-phone-input">Данные не верны</div>
+                  <input id="tel" type="text" name="tel" placeholder="+7 Введите 10 цифр номера">
+                </div>
+                <div class="contact-us__enter-email">
+                  <div class="contact-us__error-email-input">Данные не верны</div>
+                  <input id="email" type="text" name="email" placeholder="E-mail">
+                </div>
+              </div>
               <button class="contact-us__submit button">отправить</button>
             </fieldset>
           </form>
